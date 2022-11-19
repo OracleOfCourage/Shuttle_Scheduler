@@ -2,6 +2,7 @@
     --bgcolor: #eff0f3;
     --text: #0d0d0d;
     --secondary: #ff8e3c;
+    --tertiary: #d9376e;
 }
 
 body{
@@ -37,14 +38,27 @@ select, button{
     border-color: var(--text);
     box-shadow: 0px 1px 4px black;
 }
+button{
+    transition: all 150ms ease-in-out;
+}
+button:hover{
+    transform: scale(1.2,1.2);
+}
 table{
     margin: 40px auto;
 }
 th, td{
-    padding: 20px;
+    padding: 10px 20px;
+    border-color: var(--tertiary);
+    border-width: 3px;
 }
 
 footer{
     text-align: center;
     margin: auto;
+    padding: 15px;
+    background-color: var(--secondary);
+}
+footer p{
+    margin: 0;
 }
