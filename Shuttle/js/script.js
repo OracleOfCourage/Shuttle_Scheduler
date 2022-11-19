@@ -16,9 +16,58 @@ function searchButtonClicked() {
     
     var listOfLists = [];
 
-    var listOfBusStops = [];
+    var jefferson = [busOne, busTwelve];
 
-    var offCampus = ["1 Off Campus Express", "7am - 10:50pm"]
+    var apex = [busTwo, busThree, busNine, busEleven, busThirteen];
+
+    var globalVillage = [bus1One, busTwelve];
+
+    var offCampusExpress = [busOne, busTwelve];
+
+    var parkPoint = [bus1One, busTwelve];
+
+    var perkins = [bus1One, busTwelve];
+
+    var province = [bus1One, busTwelve];
+
+    var resHalls = [bus1One, busTwelve];
+
+    var ritInn = [bus1One, busTwelve];
+
+    var uCommons = [bus1One, busTwelve];
+
+
+
+    var busOne = ["1 Off Campus Express", "7am - 10:50pm"]
+
+    var busTwo = ["2 Apex", "7am - 6:06pm"]
+
+    var busThree = ["3 Apex - RIT Inn", "6:30am - 6:17pm"]
+
+    var busFour = ["4 Park Point - 175 Jefferson", "7am - 6:17pm"]
+
+    var busFive = ["5 Perkins", "7am - 6:07pm"]
+
+    var busSix = ["6 Province", "7am - 6:12pm"]
+    
+    var busSeven = ["7 175 Jefferson - Park Point - Province 	", "7:20am - 11:55am"]
+
+    var busEight = ["8 RIT Inn", "6:30am - 12:52am"]
+    
+    var busNine = ["9 Apex / Province", "6:10pm - 8:46pm"]
+
+    var busTen = ["10 175 Jefferson - Perkins - Park Point", "6:10pm - 8:58pm"]
+
+    var busEleven = ["11 Campus Shuttle", "9:15pm - 1:51am"]
+
+    var busTwelve = ["12 Weekend Retail", "6:30am - 11:12pm"]
+
+    var busThirteen = ["13 Weekend Campus", "7am - 1:52am"]
+
+    var busFourteen = ["14 Weekend RIT Inn", "7am - 1:42am"]
+
+
+
 
     
     
