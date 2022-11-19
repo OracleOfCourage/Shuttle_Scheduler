@@ -41,3 +41,8 @@ select, button{
 .table{
     margin: auto;
 }
+
+footer{
+    text-align: center;
+    margin: auto;
+}

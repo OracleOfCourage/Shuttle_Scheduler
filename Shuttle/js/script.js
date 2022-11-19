@@ -13,17 +13,61 @@ function searchButtonClicked() {
     // }
     console.log(selectType.value);
 
-    let li = document.createElement("li");
-    // li.setAttribute("id", "listElement")
-    li.innerHTML = "NULL";
+    
+    var listOfLists = [];
+
+    var listOfBusStops = [];
+
+    var offCampus = ["1 Off Campus Express", "7am - 10:50pm"]
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // let li = document.createElement("li");
+    // // li.setAttribute("id", "listElement")
+    // li.innerHTML = "NULL";
 
     if (selectType.value == "Off Campus") {
-        let busList = [{ id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "12 Weekend Retail" }]
+        console.log(document.querySelector('tbody').getElementsByTagName('tr').length);
+        // let busList = [{ id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "12 Weekend Retail" }]
 
-        for (let i = 0; i < busList.length; i++) {
-            li.setAttribute("id", busList[i].id);
-            li.innerHTML(busList[i].name);
-        }
+        // for (let i = 0; i < busList.length; i++) {
+        //     li.setAttribute("id", busList[i].id);
+        //     li.innerHTML(busList[i].name);
+        // }
         //     li.innerHTML = "1 Off Campus Express"
         // document.getElementById("test").append(li);
 
