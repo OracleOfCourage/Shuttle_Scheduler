@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Shuttle Scheduler</title>
 
+    <link href="css/style.css" rel="stylesheet">
     <script src="js/script.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +17,7 @@
             <p>Shuttle Scheduler</p>
         </h1>
     </header>
-    <section>
+    <section class="input">
         <select id="location">
             <option value="skip" selected>Choose a Bus Stop</option>
             <option value="175 Jefferson">175 Jefferson</option>
@@ -30,7 +31,7 @@
         </select>
         <button class="searchbutton" type="button" id="search">Search</button>
     </section>
-    <article>
+    <section class="table">
         <table>
             <tbody>
                 <tr>
@@ -91,10 +92,6 @@
                 </tr>
             </tbody>
         </table>
-    </article>
-
-<div class="route">Routes:</div>
-<ul id="test"></ul>
-
+    </section>
 </body>
 </html>
