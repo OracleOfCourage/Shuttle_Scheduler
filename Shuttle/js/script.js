@@ -6,7 +6,7 @@ window.onload = (e) => { document.querySelector("#search").onclick = searchButto
 function searchButtonClicked() {
 
 
-    
+
     //Selects the currently selected Bus Stop
     let selectType = document.querySelector('#location');
 
@@ -28,7 +28,7 @@ function searchButtonClicked() {
 
     var busSix = ["6 Province", "7am - 6:12pm"]
 
-    var busSeven = ["7 175 Jefferson - Park Point - Province 	", "7:20am - 11:55am"]
+    var busSeven = ["7 175 Jefferson - Park Point - Province", "7:20am - 11:55am"]
 
     var busEight = ["8 RIT Inn", "6:30am - 12:52am"]
 
@@ -71,22 +71,21 @@ function searchButtonClicked() {
     var listOfbusses = [jefferson, apex, globalVillage, offCampusExpress, parkPoint, perkins, province, resHalls, ritInn, uCommons];
 
 
-    
+
 
 
     var tableArea = document.getElementById('tableArea');
-    
-  let test = tableArea.querySelector('table')
-if(test)
-{
-    test.remove();
-}
+
+    let test = tableArea.querySelector('table')
+    if (test) {
+        test.remove();
+    }
 
     tableThing = document.createElement('table');
 
     tHead = document.createElement('tr');
-    tHead.appendChild(document.createElement('td'));
-    tHead.appendChild(document.createElement('td'));
+    tHead.appendChild(document.createElement('th'));
+    tHead.appendChild(document.createElement('th'));
 
     tHead.cells[0].appendChild(document.createTextNode("Shuttle Route"));
     tHead.cells[1].appendChild(document.createTextNode("Hours of Operation"));
@@ -123,29 +122,101 @@ if(test)
         case "RIT Inn":
             busStop = 8;
             break;
-            case "University Commons":
-                busStop = 9;
-                break;
+        case "University Commons":
+            busStop = 9;
+            break;
         default:
             busStop = null;
             break;
     }
 
-if(busStop !=null)
-{
-    for (let i = 0; i < listOfbusses[busStop].length; i++) {
+    if (busStop != null) {
+        for (let i = 0; i < listOfbusses[busStop].length; i++) {
 
-        tr = document.createElement('tr');
+            tr = document.createElement('tr');
 
-        tr.appendChild(document.createElement('td'));
-        tr.appendChild(document.createElement('td'));
-
-        tr.cells[0].appendChild(document.createTextNode(listOfbusses[busStop][i][0]));
-        tr.cells[1].appendChild(document.createTextNode(listOfbusses[busStop][i][1]));
+            console.log(listOfbusses[busStop][i]);
 
 
-        tableThing.appendChild(tr);
-        tableArea.appendChild(tableThing);
+            tr.appendChild(document.createElement('td'));
+            tr.appendChild(document.createElement('td'));
+
+            a = document.createElement('a');
+            a.setAttribute("target", "_blank");
+            switch (listOfbusses[busStop][i][0]) {
+                case "1 Off Campus Express":
+                    a.setAttribute("href", "https://www.rit.edu/parking/1-campus-express");
+                    var linkText = document.createTextNode("1 Off Campus Express");
+                    break;
+                case "2 Apex":
+                    a.setAttribute("href", "https://www.rit.edu/parking/2-apex");
+                    var linkText = document.createTextNode("2 Apex");
+                    break;
+                case "3 Apex - RIT Inn":
+                    a.setAttribute("href", "https://www.rit.edu/parking/3-apex-rit-inn");
+                    var linkText = document.createTextNode("3 Apex - RIT Inn");
+                    break;
+                case "4 Park Point - 175 Jefferson":
+                    a.setAttribute("href", "https://www.rit.edu/parking/4-park-point-175-jefferson");
+                    var linkText = document.createTextNode("4 Park Point - 175 Jefferson");
+                    break;
+                case "5 Perkins":
+                    a.setAttribute("href", "https://www.rit.edu/parking/5-perkins-green");
+                    var linkText = document.createTextNode("5 Perkins");
+                    break;
+                case "6 Province":
+                    a.setAttribute("href", "https://www.rit.edu/parking/6-province");
+                    var linkText = document.createTextNode("6 Province");
+                    break;
+                case "7 175 Jefferson - Park Point - Province":
+                    a.setAttribute("href", "https://www.rit.edu/parking/7-175-jefferson-park-point-province");
+                    var linkText = document.createTextNode("7 175 Jefferson - Park Point - Province");
+                    break;
+                case "8 RIT Inn":
+                    a.setAttribute("href", "https://www.rit.edu/parking/8-rit-inn");
+                    var linkText = document.createTextNode("8 RIT Inn");
+                    break;
+                case "9 Apex / Province":
+                    a.setAttribute("href", "https://www.rit.edu/parking/9-apex-province");
+                    var linkText = document.createTextNode("9 Apex / Province");
+                    break;
+                case "10 175 Jefferson - Perkins - Park Point":
+                    a.setAttribute("href", "https://www.rit.edu/parking/10-175-jefferson-perkins-park-point");
+                    var linkText = document.createTextNode("10 175 Jefferson - Perkins - Park Point");
+                    break;
+                case "11 Campus Shuttle":
+                    a.setAttribute("href", "https://www.rit.edu/parking/11-campus-shuttle");
+                    var linkText = document.createTextNode("11 Campus Shuttle");
+                    break;
+                case "12 Weekend Retail":
+                    a.setAttribute("href", "https://www.rit.edu/parking/12-weekend-retail-shuttle");
+                    var linkText = document.createTextNode("12 Weekend Retail");
+                    break;
+                case "13 Weekend Campus":
+                    a.setAttribute("href", "https://www.rit.edu/parking/13-weekend-campus-shuttle");
+                    var linkText = document.createTextNode("13 Weekend Campus");
+                    break;
+                case "14 Weekend RIT Inn":
+                    a.setAttribute("href", "https://www.rit.edu/parking/14-weekend-rit-inn");
+                    var linkText = document.createTextNode("14 Weekend RIT Inn");
+                    break;
+                default:
+                    a.setAttribute("href", "https://people.rit.edu/cal7183/Shuttle_Scheduler/Shuttle/");
+                    var linkText = document.createTextNode("ERROR");
+                    break;
+            }
+
+            a.appendChild(linkText);
+
+            // tr.cells[0].appendChild(document.createTextNode(listOfbusses[busStop][i][0]));
+            tr.cells[0].appendChild(a);
+            tr.cells[1].appendChild(document.createTextNode(listOfbusses[busStop][i][1]));
+
+
+            // tr.cells[0].setAttribute("href", "http://www.microsoft.com");
+
+            tableThing.appendChild(tr);
+            tableArea.appendChild(tableThing);
+        }
     }
-}
 }
