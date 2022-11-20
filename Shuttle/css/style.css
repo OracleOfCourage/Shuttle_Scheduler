@@ -42,7 +42,7 @@ button:hover{
     transform: scale(1.2,1.2);
 }
 table{
-    margin: 40px auto;
+    margin: 40px auto 100px;
 }
 th, td{
     padding: 10px 20px;
