@@ -78,6 +78,12 @@ function searchButtonClicked() {
 
     var tableArea = document.getElementById('tableArea');
     
+  let test = tableArea.querySelector('table')
+if(test)
+{
+    test.remove();
+}
+
     tableThing = document.createElement('table');
 
     tHead = document.createElement('tr');
