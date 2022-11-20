@@ -52,7 +52,7 @@ th, td{
 footer{
     position: fixed;
     bottom: 0;
-    width:100%;
+    width: calc(min(100%, 1000px));
     text-align: center;
     margin: auto;
     padding: 15px;
