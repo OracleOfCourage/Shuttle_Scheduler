@@ -14,27 +14,27 @@ function searchButtonClicked() {
     console.log(selectType.value);
 
     
-    var listOfLists = [];
+    var listOfbusses = [jefferson, apex, globalVillage, offCampusExpress, parkPoint, perkins, province, resHalls, ritInn, uCommons];
 
     var jefferson = [busOne, busTwelve];
 
     var apex = [busTwo, busThree, busNine, busEleven, busThirteen];
 
-    var globalVillage = [bus1One, busTwelve];
+    var globalVillage = [busEight, busEleven, busThirteen, busFourteen];
 
     var offCampusExpress = [busOne, busTwelve];
 
-    var parkPoint = [bus1One, busTwelve];
+    var parkPoint = [busFour, busSeven, busTen, busEleven, busThirteen];
 
-    var perkins = [bus1One, busTwelve];
+    var perkins = [busFive, busTen, busEleven, busThirteen];
 
-    var province = [bus1One, busTwelve];
+    var province = [busSix, busSeven, busNine, busEleven, busThirteen];
 
-    var resHalls = [bus1One, busTwelve];
+    var resHalls = [busFour, busFive, busSix, busSeven, busNine, busTen, busEleven, busTwelve, busThirteen];
 
-    var ritInn = [bus1One, busTwelve];
+    var ritInn = [busThree, busEight, busFourteen];
 
-    var uCommons = [bus1One, busTwelve];
+    var uCommons = [busEight, busEleven, busThirteen, busFourteen];
 
 
 
@@ -69,7 +69,8 @@ function searchButtonClicked() {
 
 
 
-    
+    console.log(document.querySelector('tr').getElementsByTagName('td').length);
+
     
     
     
