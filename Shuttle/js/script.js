@@ -70,6 +70,7 @@ function searchButtonClicked() {
 
 
     console.log(document.querySelector('tr').getElementsByTagName('td').length);
+    console.log("line 73");
 
     
     
@@ -112,6 +113,7 @@ function searchButtonClicked() {
 
     if (selectType.value == "Off Campus") {
         console.log(document.querySelector('tbody').getElementsByTagName('tr').length);
+        console.log("line 116");
         // let busList = [{ id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "12 Weekend Retail" }]
 
         // for (let i = 0; i < busList.length; i++) {
