@@ -13,7 +13,7 @@ function searchButtonClicked() {
     // }
 
 
-    var busOne = ["1 Off CampusExpress", "7am - 10:50pm"]
+    var busOne = ["1 Off Campus Express", "7am - 10:50pm"]
 
     var busTwo = ["2 Apex", "7am - 6:06pm"]
 
