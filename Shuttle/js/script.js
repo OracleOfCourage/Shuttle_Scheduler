@@ -4,9 +4,6 @@ window.onload = (e) => { document.querySelector("#search").onclick = searchButto
 
 
 function searchButtonClicked() {
-
-
-    
     //Selects the currently selected Bus Stop
     let selectType = document.querySelector('#location');
 
