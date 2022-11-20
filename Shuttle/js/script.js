@@ -13,7 +13,7 @@ function searchButtonClicked() {
     // }
     console.log(selectType.value);
 
-    
+
     var listOfbusses = [jefferson, apex, globalVillage, offCampusExpress, parkPoint, perkins, province, resHalls, ritInn, uCommons];
 
     var jefferson = [busOne, busTwelve];
@@ -49,11 +49,11 @@ function searchButtonClicked() {
     var busFive = ["5 Perkins", "7am - 6:07pm"]
 
     var busSix = ["6 Province", "7am - 6:12pm"]
-    
+
     var busSeven = ["7 175 Jefferson - Park Point - Province 	", "7:20am - 11:55am"]
 
     var busEight = ["8 RIT Inn", "6:30am - 12:52am"]
-    
+
     var busNine = ["9 Apex / Province", "6:10pm - 8:46pm"]
 
     var busTen = ["10 175 Jefferson - Perkins - Park Point", "6:10pm - 8:58pm"]
@@ -69,12 +69,21 @@ function searchButtonClicked() {
 
 
 
-   // console.log(document.querySelector('tr').getElementsByTagName('td').length);
+    // console.log(document.querySelector('tr').getElementsByTagName('td').length);
     console.log("line 73");
 
-    
+
     var tableArea = document.getElementById('tableArea');
     tableThing = document.createElement('table');
+
+    tHead = document.createElement('tr');
+    tHead.appendChild(document.createElement('td'));
+    tHead.appendChild(document.createElement('td'));
+
+    tHead.cells[0].appendChild(document.createTextNode("Shuttle Route"));
+    tHead.cells[1].appendChild(document.createTextNode("Hours of Operation"));
+
+    tableThing.appendChild(tHead);
 
     tr = document.createElement('tr');
 
@@ -84,43 +93,42 @@ function searchButtonClicked() {
     tr.cells[0].appendChild(document.createTextNode(busOne[0]))
     tr.cells[1].appendChild(document.createTextNode(busOne[1]));
 
-    
+
     console.log(tr.cells[0].firstChild);
     console.log(tr.cells[1].firstChild);
 
-    for(var i = 1; i < 4; i++)
-    {
+    for (var i = 1; i < 4; i++) {
         tableThing.appendChild(tr.cloneNode(true));
     }
-    
+
     tableArea.appendChild(tableThing);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // let li = document.createElement("li");
     // // li.setAttribute("id", "listElement")
     // li.innerHTML = "NULL";
