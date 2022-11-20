@@ -69,17 +69,31 @@ function searchButtonClicked() {
 
 
 
-    console.log(document.querySelector('tr').getElementsByTagName('td').length);
+   // console.log(document.querySelector('tr').getElementsByTagName('td').length);
     console.log("line 73");
 
     
+    var tableArea = document.getElementById('tableArea');
+    tableThing = document.createElement('table');
+
+    tr = document.createElement('tr');
+
+    tr.appendChild(document.createElement('td'));
+    tr.appendChild(document.createElement('td'));
+
+    tr.cells[0].appendChild(document.createTextNode(busOne[0]))
+    tr.cells[1].appendChild(document.createTextNode(busOne[1]));
+
     
+    console.log(tr.cells[0].firstChild);
+    console.log(tr.cells[1].firstChild);
+
+    for(var i = 1; i < 4; i++)
+    {
+        tableThing.appendChild(tr.cloneNode(true));
+    }
     
-    
-    
-    
-    
-    
+    tableArea.appendChild(tableThing);
     
     
     
