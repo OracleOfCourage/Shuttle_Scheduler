@@ -14,7 +14,6 @@ function searchButtonClicked() {
     // {
     // selectType.value = "";
     // }
-    console.log(selectType.value);
 
 
     var busOne = ["1 Off Campus Express", "7am - 10:50pm"]
@@ -72,8 +71,7 @@ function searchButtonClicked() {
     var listOfbusses = [jefferson, apex, globalVillage, offCampusExpress, parkPoint, perkins, province, resHalls, ritInn, uCommons];
 
 
-    // console.log(document.querySelector('tr').getElementsByTagName('td').length);
-    console.log("line 73");
+    
 
 
     var tableArea = document.getElementById('tableArea');
@@ -133,10 +131,9 @@ if(test)
             break;
     }
 
-    console.log(listOfbusses[busStop].length);
-
+if(busStop !=null)
+{
     for (let i = 0; i < listOfbusses[busStop].length; i++) {
-        // console.log(15);
 
         tr = document.createElement('tr');
 
@@ -146,95 +143,9 @@ if(test)
         tr.cells[0].appendChild(document.createTextNode(listOfbusses[busStop][i][0]));
         tr.cells[1].appendChild(document.createTextNode(listOfbusses[busStop][i][1]));
 
-        console.log(tr.cells[0].textContent);
-        console.log(tr.cells[1].textContent);
 
         tableThing.appendChild(tr);
         tableArea.appendChild(tableThing);
     }
-
-
-
-
-    // console.log(tr.cells[0].firstChild);
-    // console.log(tr.cells[1].firstChild);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // let li = document.createElement("li");
-    // // li.setAttribute("id", "listElement")
-    // li.innerHTML = "NULL";
-
-    // if (selectType.value == "Off Campus") {
-    //     console.log(document.querySelector('tbody').getElementsByTagName('tr').length);
-    //     console.log("line 116");
-    //     let busList = [{ id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "12 Weekend Retail" }]
-
-    //     for (let i = 0; i < busList.length; i++) {
-    //         li.setAttribute("id", busList[i].id);
-    //         li.innerHTML(busList[i].name);
-    //     }
-    //         li.innerHTML = "1 Off Campus Express"
-    //     document.getElementById("test").append(li);
-
-    //     li.innerHTML = "12 Weekend Retail"
-    //     document.getElementById("test").append(li);
-    // }
-
-    // if(selectType.value == "Apex")
-    // {
-    //     console.log("overwrite?");
-    // li.innerHTML = "2 Apex"
-    // document.getElementById("test").append(li);
-    // }
-
-    // if(selectType.value == "Apex" || selectType.value == "RIT Inn")
-    // {
-    // li.innerHTML = "3 Apex - RIT Inn"
-    // document.getElementById("test").append(li);
-    //}
-
-    // let loopcheck = false;
-    // console.log(document.querySelector('#test').getElementsByTagName('li').length);
-    // for (let i = 0; i < document.querySelector('#test').getElementsByTagName('li').length; i++) {
-
-    //     if (document.querySelector('#test').getElementsByTagName('li')[i].innerHTML == li.innerHTML) {
-
-    //         loopcheck = true;
-    //     }
-    // }
-    // if(!loopcheck)
-    // {
-    // document.getElementById("test").append(li);
-    // }
-
-    // console.log(document.getElementById("test"));
-
+}
 }
