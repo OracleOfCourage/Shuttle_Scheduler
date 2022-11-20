@@ -4,6 +4,9 @@ window.onload = (e) => { document.querySelector("#search").onclick = searchButto
 
 
 function searchButtonClicked() {
+
+
+    
     //Selects the currently selected Bus Stop
     let selectType = document.querySelector('#location');
 
@@ -12,30 +15,6 @@ function searchButtonClicked() {
     // selectType.value = "";
     // }
     console.log(selectType.value);
-
-
-    var listOfbusses = [jefferson, apex, globalVillage, offCampusExpress, parkPoint, perkins, province, resHalls, ritInn, uCommons];
-
-    var jefferson = [busOne, busTwelve];
-
-    var apex = [busTwo, busThree, busNine, busEleven, busThirteen];
-
-    var globalVillage = [busEight, busEleven, busThirteen, busFourteen];
-
-    var offCampusExpress = [busOne, busTwelve];
-
-    var parkPoint = [busFour, busSeven, busTen, busEleven, busThirteen];
-
-    var perkins = [busFive, busTen, busEleven, busThirteen];
-
-    var province = [busSix, busSeven, busNine, busEleven, busThirteen];
-
-    var resHalls = [busFour, busFive, busSix, busSeven, busNine, busTen, busEleven, busTwelve, busThirteen];
-
-    var ritInn = [busThree, busEight, busFourteen];
-
-    var uCommons = [busEight, busEleven, busThirteen, busFourteen];
-
 
 
     var busOne = ["1 Off Campus Express", "7am - 10:50pm"]
@@ -68,12 +47,43 @@ function searchButtonClicked() {
 
 
 
+    var jefferson = [busFour, busSeven, busTen, busEleven, busThirteen];
+
+    var apex = [busTwo, busThree, busNine, busEleven, busThirteen];
+
+    var globalVillage = [busEight, busEleven, busThirteen, busFourteen];
+
+    var offCampusExpress = [busOne, busTwelve];
+
+    var parkPoint = [busFour, busSeven, busTen, busEleven, busThirteen];
+
+    var perkins = [busFive, busTen, busEleven, busThirteen];
+
+    var province = [busSix, busSeven, busNine, busEleven, busThirteen];
+
+    var resHalls = [busFour, busFive, busSix, busSeven, busNine, busTen, busEleven, busTwelve, busThirteen];
+
+    var ritInn = [busThree, busEight, busFourteen];
+
+    var uCommons = [busEight, busEleven, busThirteen, busFourteen];
+
+
+
+    var listOfbusses = [jefferson, apex, globalVillage, offCampusExpress, parkPoint, perkins, province, resHalls, ritInn, uCommons];
+
 
     // console.log(document.querySelector('tr').getElementsByTagName('td').length);
     console.log("line 73");
 
 
     var tableArea = document.getElementById('tableArea');
+    
+  let test = tableArea.querySelector('table')
+if(test)
+{
+    test.remove();
+}
+
     tableThing = document.createElement('table');
 
     tHead = document.createElement('tr');
@@ -85,23 +95,72 @@ function searchButtonClicked() {
 
     tableThing.appendChild(tHead);
 
-    tr = document.createElement('tr');
+    let busStop = 0;
 
-    tr.appendChild(document.createElement('td'));
-    tr.appendChild(document.createElement('td'));
-
-    tr.cells[0].appendChild(document.createTextNode(busOne[0]))
-    tr.cells[1].appendChild(document.createTextNode(busOne[1]));
-
-
-    console.log(tr.cells[0].firstChild);
-    console.log(tr.cells[1].firstChild);
-
-    for (var i = 1; i < 4; i++) {
-        tableThing.appendChild(tr.cloneNode(true));
+    switch (selectType.value) {
+        case "175 Jefferson":
+            busStop = 0;
+            break;
+        case "Apex":
+            busStop = 1;
+            break;
+        case "Global Village / Riverknoll":
+            busStop = 2;
+            break;
+        case "Off Campus":
+            busStop = 3;
+            break;
+        case "Park Point":
+            busStop = 4;
+            break;
+        case "Perkins":
+            busStop = 5;
+            break;
+        case "Province":
+            busStop = 6;
+            break;
+        case "Residence Halls":
+            busStop = 7;
+            break;
+        case "RIT Inn":
+            busStop = 8;
+            break;
+            case "University Commons":
+                busStop = 9;
+                break;
+        default:
+            busStop = null;
+            break;
     }
 
-    tableArea.appendChild(tableThing);
+    console.log(listOfbusses[busStop].length);
+
+    for (let i = 0; i < listOfbusses[busStop].length; i++) {
+        // console.log(15);
+
+        tr = document.createElement('tr');
+
+        tr.appendChild(document.createElement('td'));
+        tr.appendChild(document.createElement('td'));
+
+        tr.cells[0].appendChild(document.createTextNode(listOfbusses[busStop][i][0]));
+        tr.cells[1].appendChild(document.createTextNode(listOfbusses[busStop][i][1]));
+
+        console.log(tr.cells[0].textContent);
+        console.log(tr.cells[1].textContent);
+
+        tableThing.appendChild(tr);
+        tableArea.appendChild(tableThing);
+    }
+
+
+
+
+    // console.log(tr.cells[0].firstChild);
+    // console.log(tr.cells[1].firstChild);
+
+
+
 
 
 
@@ -133,21 +192,21 @@ function searchButtonClicked() {
     // // li.setAttribute("id", "listElement")
     // li.innerHTML = "NULL";
 
-    if (selectType.value == "Off Campus") {
-        console.log(document.querySelector('tbody').getElementsByTagName('tr').length);
-        console.log("line 116");
-        // let busList = [{ id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "12 Weekend Retail" }]
+    // if (selectType.value == "Off Campus") {
+    //     console.log(document.querySelector('tbody').getElementsByTagName('tr').length);
+    //     console.log("line 116");
+    //     let busList = [{ id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "1 Off Campus Express" }, { id: "listElement", name: "12 Weekend Retail" }]
 
-        // for (let i = 0; i < busList.length; i++) {
-        //     li.setAttribute("id", busList[i].id);
-        //     li.innerHTML(busList[i].name);
-        // }
-        //     li.innerHTML = "1 Off Campus Express"
-        // document.getElementById("test").append(li);
+    //     for (let i = 0; i < busList.length; i++) {
+    //         li.setAttribute("id", busList[i].id);
+    //         li.innerHTML(busList[i].name);
+    //     }
+    //         li.innerHTML = "1 Off Campus Express"
+    //     document.getElementById("test").append(li);
 
-        // li.innerHTML = "12 Weekend Retail"
-        // document.getElementById("test").append(li);
-    }
+    //     li.innerHTML = "12 Weekend Retail"
+    //     document.getElementById("test").append(li);
+    // }
 
     // if(selectType.value == "Apex")
     // {
