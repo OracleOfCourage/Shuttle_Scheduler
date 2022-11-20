@@ -85,6 +85,12 @@ function searchButtonClicked() {
 
     tableThing.appendChild(tHead);
 
+let 
+switch(selectType)
+{
+case "175 Jefferson"
+}
+
     tr = document.createElement('tr');
 
     tr.appendChild(document.createElement('td'));
@@ -97,9 +103,7 @@ function searchButtonClicked() {
     console.log(tr.cells[0].firstChild);
     console.log(tr.cells[1].firstChild);
 
-    for (var i = 1; i < 4; i++) {
-        tableThing.appendChild(tr.cloneNode(true));
-    }
+   
 
     tableArea.appendChild(tableThing);
 
